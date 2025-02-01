@@ -1504,6 +1504,9 @@ export default class RFB extends EventTargetMixin {
             case "005.000":  // RealVNC 5.3
                 this._rfbVersion = 3.8;
                 break;
+            case "055.008":
+                this._rfb_version = 55.8;
+                break;
             default:
                 return this._fail("Invalid server version " + sversion);
         }
